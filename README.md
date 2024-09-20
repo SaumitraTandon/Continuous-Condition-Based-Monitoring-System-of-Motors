@@ -45,7 +45,11 @@ This project aims to monitor the condition of motors in real-time by collecting 
 
 - Upload the code to your microcontroller.
 
-### 2. Software Setup
+### 2. Circuit Diagram
+
+![Motor Monitoring Diagram](images/Circuit.png)
+
+### 3. Software Setup
 - Clone the repository and install the required Python libraries for the ML model:
   
     ```bash
@@ -56,7 +60,7 @@ This project aims to monitor the condition of motors in real-time by collecting 
 
 - Open the `SIH notebook.ipynb` in Jupyter to train and test the machine learning model.
 
-### 3. Website
+### 4. Website
 - Set up the website to receive sensor data and display predictions.
 - Ensure the website is connected to the ML model to provide real-time motor condition status.
 

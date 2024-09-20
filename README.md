@@ -9,7 +9,8 @@ This project aims to monitor the condition of motors in real-time by collecting 
 - **Web Interface**: Displays motor condition and potential defects.
 - **Modular Sensors**: Includes motion, temperature, humidity, and power monitoring sensors.
 - **Remote Data Transmission**: Utilizes Wi-Fi to send data to the server for processing and visualization.
-
+## Circuit Simulation
+![My Image](images/Circuit.png)
 ## Hardware Used
 
 - **MPU6050**: Motion sensor to monitor vibration and movement.

@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 100vw;
+  background-image: linear-gradient(#23739C 0%, #101B2C);
+  min-height: 80vh;
+}
+
+.main {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.meter-heading {
+  text-align: center;
+  color: aliceblue;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 10px rgba(74, 73, 73, 0.5);
+}
+
+.meter-section {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.current-meter-value, 
+.voltage-meter-value, 
+.wattmeter-value,
+.speed-meter-value {
+    background-color: #1b3147;
+    font-size: 30px;
+    width: 170px;
+    height: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.301);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px; /* Adds space between the meter and the value */
+}
+
+.meter {
+  width: 40%;
+  min-width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Changed from space-evenly to center */
+}
+
+
+
+.main-scale {
+  width: 250px;
+  height: 250px;
+  border: 20px solid #FFF;
+  border-bottom: 20px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.main-scale::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  inset: -21px;
+  border-radius: 50%;
+  border: 20px solid #ff3c0000;
+}
+
+.meter-label {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.258);
+  font-size: 18px;
+}
+
+/* Speed Meter */
+.speed-meter {
+  position: relative;
+  width: 250px; /* Adjusted to match .main-scale */
+  height: 250px; /* Adjusted to match .main-scale */
+  margin: 0 auto;
+}
+
+.speed-meter-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px; /* Adjusted font size */
+  color: #ffffff;
+  z-index: 10;
+}
+
+.speed-meter-scale {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+/* Current Meter */
+.current-meter {
+  position: relative;
+  width: 250px;  /* Adjusted to match .main-scale */
+  height: 250px; /* Adjusted to match .main-scale */
+  margin: 0 auto;
+}
+
+.current-meter-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px; /* Adjusted font size to be consistent */
+  font-weight: bold;
+  color: #ffffff;
+  z-index: 10;
+}
+
+.current-meter-scale {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-right: 22px solid #0E1822; /* Dark color */
+  border-top: 22px solid transparent;
+  border-left: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  transition: transform 500ms linear;
+}
+
+.current-meter-label {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Voltage Meter */
+.voltage-meter {
+  position: relative;
+  width: 250px;  /* Same size as .main-scale */
+  height: 250px; /* Same size as .main-scale */
+  margin: 0 auto;
+}
+
+.voltage-meter-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px; /* Adjusted to match others */
+  color: #ffffff;
+  z-index: 10;
+}
+
+.voltage-meter-scale {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+.voltage-meter-label {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Wattmeter */
+.wattmeter {
+  position: relative;
+  width: 250px; /* Same size as .main-scale */
+  height: 250px; /* Same size as .main-scale */
+  margin: 0 auto;
+}
+
+.wattmeter-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px; /* Consistent size */
+  color: #ffffff;
+  z-index: 10;
+}
+
+.wattmeter-scale {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+.wattmeter-label {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}

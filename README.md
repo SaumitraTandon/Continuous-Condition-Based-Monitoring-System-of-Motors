@@ -46,7 +46,7 @@ This project aims to monitor the condition of motors in real-time by collecting 
 
 ### 2. Circuit Diagram
 
-![Motor Monitoring Diagram](images/Circuit.png)
+![Motor Monitoring Diagram](images/CIRCUIT.png)
 
 ### 3. Software Setup
 - Clone the repository and install the required Python libraries for the ML model:
